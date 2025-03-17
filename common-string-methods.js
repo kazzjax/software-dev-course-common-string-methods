@@ -65,27 +65,56 @@ Complete the following tasks and assign the results to the specified variables. 
 
 */
 
+//Practice Problem #1
+//Activity 1: Searching Strings
+let practiceOneActivityOne = "Learning JavaScript is fun!";
+console.log(practiceOneActivityOne.includes("JavaScript"));
+console.log(practiceOneActivityOne.indexOf("fun"));
+//Activity 2: Transforming Strings
+let practiceOneActivityTwo = " CODE BOOTCAMP "
+console.log(practiceOneActivityTwo.toLowerCase().trim().replace("bootcamp", "JavaScript"));
+//Activity 3: Breaking Apart a Sentence
+let practiceOneActivityThree = "Coding is fun and educational";
+let revisedOneThree = practiceOneActivityThree.split(" ");
+console.log(revisedOneThree);
+//Activity 4: Retrieving Substrings
+let practiceOneActivityFour = "Bootcamp";
+console.log(practiceOneActivityFour.charAt(0));
+console.log(practiceOneActivityFour.slice(-4));
+//Advanced Challenge, I had to use ChatGPT to find out how to find the starting point of Order
+//If that is incorrect and we learned a different way, I will need guidance on how to achieve that
+let advancedChallenge = `Customer: John Doe 
+Order: Apple, Banana, Grape
+Total: $20.50`;
+console.log(advancedChallenge.slice(10,19));
+let orderLine = advancedChallenge.split("\n").find(line => line.startsWith("Order:"));
+let itemSplit = orderLine.replace("Order: ", "").split(", ");
+console.log(itemSplit); 
+let totalUpper = advancedChallenge.replace("Total", "TOTAL");
+console.log(totalUpper)
+
+
 //Starter Code
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = (inputString.includes("JavaScript"));
+let codingPosition = (inputString.indexOf("Coding"));
+let startsWithWelcome = (inputString.startsWith("Welcome")); 
+let endsWithToday = (inputString.endsWith("today"));
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = (inputString.toLowerCase());
+let uppercaseString = (inputString.toUpperCase()); 
+let trimmedString = (inputString.trim());
+let replacedString = (inputString.replace("JavaScript", "coding"));
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = (inputString.split(" "));
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = (inputString.trim().charAt(0));
+let extractedBootcamp = (inputString.slice(24,33));
 
 // Log all results
 console.log({
